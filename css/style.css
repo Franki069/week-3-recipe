@@ -8,13 +8,65 @@ body {
     background-color: rgb(181, 247, 151);
 }
 
-.heading {
+
+.container {
+    width: 1000px;
+    height: 1000px;
+    border: 1px solid white;
+    margin: 2rem auto;
+}
+
+.container > div {
+    width:  200px;
+    height: 200px;
+    border: 1px solid rgb(181, 247, 151);
+    margin: 0 auto;
+    
+}
+
+#red {
+    position: relative;
+    top: -300px;
+    animation:red 3s ease-in-out forwards;
+    animation-iteration-count: infinite;
     text-align: center;
     font-size: 2rem;
     font-family: 'Permanent Marker', cursive;
     color: rgb(255, 127, 238);
 }
 
-.footer{
+@keyframes red {
+    100% {top: 0;}
+}
+
+#blue {
+
+    animation: blue 2s ease-in-out;
+    opacity: 0;
+    animation-iteration-count: infinite;
+}
+@keyframes blue {
+    100% {opacity: 1;}
+}
+
+#yellow {
+    background-color: green;
+    animation: green 3s ease-in-out forwards;
+    animation-iteration-count: infinite;
+    transform: rotatey(180deg);
+}
+
+#green {
+        animation: green 3s ease-in-out forwards;
+    animation-iteration-count: infinite;
+    
+}
+
+    
+    @keyframes green {
+        50% {transform: rotate(180deg);}
+    }
+
+.footer {
     text-align: center;
 }
